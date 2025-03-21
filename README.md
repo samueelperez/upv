@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clon de Login UPV con Supabase
 
-## Getting Started
+Este proyecto es un clon del sistema de login de la Universidad Politécnica de Valencia, implementado con Next.js y Supabase para la autenticación.
 
-First, run the development server:
+## Configuración
+
+### Prerequisitos
+
+- Node.js 18.x o superior
+- Una cuenta en [Supabase](https://supabase.com)
+
+### Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/upv-login-clone.git
+   cd upv-login-clone
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configura tus variables de entorno:
+   - Copia el archivo `.env.local.example` a `.env.local`
+   - Reemplaza los valores con tus credenciales de Supabase:
+     ```
+     NEXT_PUBLIC_SUPABASE_URL=https://your-project-url.supabase.co
+     NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+     ```
+
+### Configuración de Supabase
+
+1. Crea una cuenta en [Supabase](https://supabase.com).
+2. Crea un nuevo proyecto.
+3. En la sección "Authentication > Settings", habilita el proveedor de Email/Password.
+4. Opcionalmente, puedes crear algunos usuarios para pruebas en la sección "Authentication > Users".
+
+## Desarrollo
+
+Para iniciar el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Características
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Autenticación con email y contraseña mediante Supabase
+- Interfaz similar a la de la UPV
+- Página de dashboard protegida
+- Gestión de sesiones
 
-## Learn More
+## Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` - Rutas y páginas de la aplicación (Next.js App Router)
+- `components/` - Componentes React reutilizables
+- `lib/` - Utilidades y configuraciones (como el cliente de Supabase)
+- `public/` - Archivos estáticos (imágenes, etc.)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notas importantes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Este proyecto es solo con fines educativos y no está afiliado oficialmente a la UPV.
+- Para un entorno de producción, debes implementar medidas adicionales de seguridad. 
