@@ -1,9 +1,0 @@
-# Esta carpeta debe contener los siguientes archivos de imagen:
-# - logo-upv.png (logo de la UPV en colores originales para el encabezado)
-# - logo-upv-white.png (logo de la UPV en blanco para el footer)
-
-# Archivos necesarios
-
-Para que la página funcione correctamente, se necesitan los siguientes logos:
-- upv-logo.png - Logo de la UPV en color para el header
-- upv-logo-white.png - Logo de la UPV en blanco para el footer 
